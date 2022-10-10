@@ -13,10 +13,9 @@ import {
     Animated,
     Dimensions,
     Text,
-    TouchableWithoutFeedback,
-    ViewPropTypes as RNViewPropTypes,
+    TouchableWithoutFeedback
 } from 'react-native'
-
+import {ViewPropTypes as RNViewPropTypes} from 'deprecated-react-native-prop-types';
 import PropTypes from 'prop-types';
 const ViewPropTypes = RNViewPropTypes || View.propTypes;
 export const DURATION = {
@@ -153,7 +152,7 @@ Toast.propTypes = {
         'center',
         'bottom',
     ]),
-    textStyle: Text.propTypes.style,
+    textStyle: PropTypes.object,
     positionValue:PropTypes.number,
     fadeInDuration:PropTypes.number,
     fadeOutDuration:PropTypes.number,
